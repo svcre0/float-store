@@ -12,21 +12,13 @@ const HomeData = () => {
   const [products, setProducts] = useState([]);
  
   useEffect(() => {
-    axios.get('http://localhost:5001/api/products')
+    axios.get('https://float-store-backend.onrender.com/api/products')
       .then(res => setProducts(res.data))
       .catch(err => console.error('Error fetching products:', err));
   }, []);
-
   
-
-
-
-
-
   return (
     <>
-   
-
 
       {/* Hero Section */}
       <section className="hero-section">
@@ -147,5 +139,6 @@ const HomeData = () => {
 };
 
 export default HomeData;
+
 
 
