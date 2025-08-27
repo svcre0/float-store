@@ -1,0 +1,219 @@
+/* Cart Container Styling */
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 50px;
+  background-color: #000000; /* Black background */
+  gap: 20px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Discount & Save Information */
+.discount-info,
+.you-save {
+  font-size: 12px;
+  color: #be383c;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.amount-save {
+  font-weight: 700;
+  color: #bb3b3b;
+}
+
+/* Product Styling */
+.product {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background-color: rgba(7, 7, 7, 0.836);
+  padding: 32px 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 460px;
+  border: 1px solid #313131;
+  border-radius: 12px;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(201, 201, 200, 0.15);
+}
+
+/* Product Image Styling */
+.product img {
+  height: 220px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 8px;
+}
+
+/* Product Title */
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  height: 48px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Product Rating */
+.product-rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #d4af37;
+  gap: 2px;
+}
+
+/* Product Price Styling */
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0 18px;
+  font-size: 15px;
+  color: #e6e6e6;
+}
+
+.discounted-price {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #bb93c2;
+  font-weight: 400;
+}
+
+/* Discount Tag Styling */
+.discount-tag {
+  background-color: #9d0b0f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+}
+
+/* Product Button */
+.product-button {
+  background-color: #3b3a3b;
+  color: #ffffff;
+  padding: 10px 26px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
+  align-self: center;
+  border-radius: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.4px;
+}
+
+.product-button:hover {
+  background-color: #a67547;
+  color: #0e0b11;
+  transform: scale(1.04);
+}
+
+/* ✅ Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain; /* ✅ Ensures full image shows */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 8px;
+  }
+
+  .product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .product-price {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .product-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .discount-info,
+  .you-save {
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .discount-tag {
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    padding: 3px 8px;
+  }
+}

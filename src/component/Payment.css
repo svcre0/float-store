@@ -1,0 +1,134 @@
+.payment {
+    background-color: #000000;
+    color:rgb(255, 255, 255);
+}
+
+.payment_container {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment_container h1 {
+    text-align: center;
+    padding: 26px;
+    font-weight: 600;
+    background-color: #313131de;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.274);
+}
+
+.payment_container h1 a {
+    text-decoration: none;
+    color: #971212; 
+}
+
+.payment_section {
+    display: flex;
+    padding: 25px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+    align-items: flex-start;
+}
+
+.payment_title {
+    width: 20%;
+    font-size: 18px;
+    font-weight: 600; /* Increased font weight */
+}
+
+.payment_address, .payment_items, .payment_details {
+    flex: 0.8;
+        color: white;
+}
+
+.payment_address p {
+    margin: 4px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.payment_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout_product_image {
+    margin-right: 20px;
+    width: 80px; 
+    background:white;
+}
+
+.payment_section form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+       color: white;
+}
+
+.payment_cardContainer {
+    background-color: #131010dc;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.payment_priceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.payment_priceContainer h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+button {
+    background-color:#ffffffdc; 
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color:black;
+}
+
+button:disabled {
+    background-color: #e7e9eb;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #f3a847; 
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .payment_section {
+    flex-direction: column;
+  }
+
+  .payment_title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .orders__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkout_product_image {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

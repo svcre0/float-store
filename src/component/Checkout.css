@@ -1,0 +1,25 @@
+.checkout {
+    display: flex;
+    padding: 20px;
+    background-color: #000000;
+    height: max-content;
+    color:rgb(255, 255, 255);
+ 
+    }
+    .checkout_title {
+    margin: 10px 10px 0 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.664);
+    color:rgb(255, 255, 255);
+    }
+
+    .checkout h3{
+    margin: 10px 10px 0 0;
+    padding: 10px;
+    
+    color:rgba(224, 224, 224, 0.945);
+    }
+    .option_basketLink{
+        text-decoration: none;
+            color:rgb(255, 255, 255);
+    }

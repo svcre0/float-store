@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+/* Gothic-style overlay */
+.overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 5;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+/* Ensure relative positioning to place overlay content */
+.home {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home-image {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%); /* Darken the image for contrast */
+}
+
+/* Fullscreen overlay centered */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none; /* prevent overlay from blocking interaction below */
+}
+
+.overlay-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  pointer-events: auto;
+}
+
+.overlay-button {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.overlay-button:hover {
+  background-color: #fff;
+  color: #111;
+  border-color: #fff;
+}
+
+.overlay-button:hover {
+  background: #fff;
+  color: #111;
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+.products-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.products-row {
+  display: flex;
+  gap: 40px;
+  animation: scroll-x 40s linear infinite;
+  width: fit-content;
+  will-change: transform;
+}
+
+/* Pause animation on hover */
+.products-carousel:hover .products-row {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* Ensure product maintains existing styling */
+.product {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 260px;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+/* product img/title/price/discount styles remain the same */
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.product-discount {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .overlay-title {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .overlay-button {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+
+  .overlay {
+    height: 60vh;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-title {
+    font-size: 1.8rem;
+  }
+
+  .overlay-button {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+  }
+}
+/* Product Grid Responsiveness */
+@media (max-width: 1024px) {
+  .product {
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .products-row {
+    flex-direction: column;
+    gap: 20px;
+    animation: none; /* Disable carousel scroll on mobile */
+  }
+}

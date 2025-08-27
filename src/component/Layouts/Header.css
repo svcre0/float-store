@@ -1,0 +1,177 @@
+/* ========== HEADER BASE STYLES ========== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ========== LOGO ========== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  margin-right: 22px;
+}
+.logo-main {
+  height: 20px;
+  width: 100px;
+  padding: 20px 18px;
+}
+
+/* ========== DELIVERY INFO ========== */
+
+
+/* ========== SEARCH BAR ========== */
+.header-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  min-width: 240px;
+  margin: 0 85px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  background: #fff;
+}
+.search-container {
+  flex: 1;
+  position: relative;
+  height: 36px;
+}
+.header-search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+.search-icon {
+  padding: 0 12px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: pointer;
+  transition: none;
+}
+.search-icon:hover,
+.search-icon:focus,
+.search-icon:active {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 20;
+  max-height: 240px;
+  overflow-y: auto;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.autocomplete-list li {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.autocomplete-list li:hover {
+  background-color: #f0f0f0;
+}
+
+
+.mobile-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+.header-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+.header-option:hover {
+  background: #f2f2f2;
+}
+.basket-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+
+.MuiSvgIcon-root {
+  font-size: 24px;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+  .mobile-icons {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    z-index: 100;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-icons.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 110;
+  }
+
+  .header {
+    position: relative;
+  }
+}
