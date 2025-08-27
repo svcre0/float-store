@@ -4,10 +4,6 @@ import Product from './Product';
 import axios from 'axios';
 
 
-
-
-
-
 const HomeData = () => {
   const [products, setProducts] = useState([]);
  
@@ -86,10 +82,6 @@ const HomeData = () => {
         </div>
       </div>
     </section>
-
- 
-
-
       {/* Product Carousel Section */}
       <section className="home-products-section">
         <div className="home-container">
@@ -111,9 +103,6 @@ const HomeData = () => {
           
         </div>
       </section>
-
-   
- 
       {/* Newsletter Section */}
       <section className="newsletter-section">
         <div className="newsletter-container">
@@ -139,6 +128,7 @@ const HomeData = () => {
 };
 
 export default HomeData;
+
 
 
 
